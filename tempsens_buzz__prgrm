@@ -1,0 +1,27 @@
+int temppin=A0;
+int buzpin=8;
+float tempthresh=7;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(buzpin,OUTPUT);
+  pinMode(temppin,INPUT);
+}
+void loop()
+{
+  float tempvalue=analogRead(temppin);
+  float temp=tempvalue*(3.0/1023.0)*10;
+  Serial.print("temperature  ");
+   Serial.print(temp);
+  
+  if(temp>7)
+  {
+    digitalWrite(buzpin,HIGH);
+  
+  }
+  else
+  {
+    digitalWrite(buzpin,LOW);
+  }
+  delay(1000);
+}
