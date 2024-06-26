@@ -1,0 +1,12 @@
+int buzzerpin=4;
+void setup()
+{
+  pinMode(buzzerpin,OUTPUT);
+
+}
+void loop(){
+  tone(buzzerpin,50);
+  delay(1000);
+  noTone(buzzerpin);
+  delay(1000);
+}
