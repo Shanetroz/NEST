@@ -1,0 +1,25 @@
+int ledpin=5;
+float ldr=2;
+int ldrstate=0;
+
+
+void setup() {
+  pinMode(ledpin,OUTPUT);
+  pinMode(ldr,INPUT);
+  
+  
+
+}
+
+void loop() {
+  ldrstate=digitalRead(ldr);
+  if(ldrstate==HIGH)
+  {
+    digitalWrite(ledpin,HIGH);
+  }
+  else
+  {
+   digitalWrite(ledpin,LOW);
+  }
+
+}
